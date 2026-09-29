@@ -51,6 +51,12 @@ public class NotaVenda {
 
     @Override
     public String toString() {
-        return "Momento da pedido: " + data + "\n" + cliente;
+        String saidaDados = "";
+        saidaDados += "Momento da pedido: " + data + "\n" + cliente;
+        for(ItensNota obj : itens){
+            saidaDados += obj;
+        }
+        saidaDados += "\nValor Total: " + total();
+        return saidaDados;
     }
 }

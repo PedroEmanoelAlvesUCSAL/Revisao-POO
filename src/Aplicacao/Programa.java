@@ -32,20 +32,24 @@ public class Programa {
 
         NotaVenda nota = new NotaVenda(dataNota, numero, cliente);
 
-        System.out.print("Quantos itens estarão na nota?");
+        System.out.print("Quantos itens estarão na nota? ");
         quantidadeItens = scan.nextInt();
+        scan.nextLine();
 
-        for(int i = 1; i<= quantidadeItens; i++){
-            System.out.println("\nInforme os dados do item " +i+":");
+        for(int i = 1; i <= quantidadeItens; i++){
+            System.out.println("\nInforme os dados do item " + i + ":");
+
             System.out.print("Nome do Produto: ");
             nomeProduto = scan.nextLine();
-            scan.nextLine();
+
             System.out.print("Preço do produto: ");
             precoProduto = scan.nextDouble();
+
             Produto produto = new Produto(nomeProduto, precoProduto);
 
             System.out.print("Quantidade: ");
             qtdProduto = scan.nextInt();
+            scan.nextLine();
 
             ItensNota item = new ItensNota(qtdProduto, precoProduto, produto);
             nota.addItem(item);

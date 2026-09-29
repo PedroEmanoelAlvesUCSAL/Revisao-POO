@@ -30,6 +30,6 @@ public class ItensNota {
 
     @Override
     public String toString() {
-        return "\n"+produto.getNome() + " Quantidade: " + quantidade + " Preço: " + preco + " Valor: " + subtotal();
+        return "\nProduto: " + produto.getNome() + " Quantidade: " + quantidade + " Preço: R$ " + preco + " Valor: " + subtotal();
     }
 }
